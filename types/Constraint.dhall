@@ -1,1 +1,4 @@
-{ attribute : Text, operator : ./ConstraintOperator.dhall, value : Text }
+{ attribute : Optional Text
+, operator : ./ConstraintOperator.dhall
+, value : Text
+}
