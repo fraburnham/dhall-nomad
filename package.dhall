@@ -28,4 +28,5 @@
 , Update = ./schemas/Update.dhall
 , Vault = ./schemas/Vault.dhall
 , Volume = ./schemas/Volume.dhall
+, VolumeMount = ./schemas/VolumeMount.dhall
 }
