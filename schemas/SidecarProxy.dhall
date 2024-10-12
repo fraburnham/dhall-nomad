@@ -9,7 +9,7 @@ in  { Type = ../types/SidecarProxy.dhall
     , default =
       { local_service_address = None Text
       , local_service_port = None Natural
-      , upstreams = None ../types/SidecarProxyUpstreams.dhall
+      , upstreams = None (List ../types/SidecarProxyUpstreams.dhall)
       , expose = None ../types/SidecarProxyExpose.dhall
       , config = None (Map Text Text)
       }

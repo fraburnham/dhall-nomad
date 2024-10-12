@@ -109,10 +109,12 @@ let web =
           , connect = Some Connect::{
             , sidecar_service = Some Connect.SidecarService::{
               , proxy = Some Connect.SidecarService.Proxy::{
-                , upstreams = Some Connect.SidecarService.Proxy.Upstreams::{
-                  , destination_name = "passbolt-mysql"
-                  , local_bind_port = 3306
-                  }
+                , upstreams = Some
+                  [ Connect.SidecarService.Proxy.Upstreams::{
+                    , destination_name = "passbolt-mysql"
+                    , local_bind_port = 3306
+                    }
+                  ]
                 }
               }
             }
