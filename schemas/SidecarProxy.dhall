@@ -5,6 +5,8 @@ let Upstreams = ./SidecarProxyUpstreams.dhall
 
 let Expose = ./SidecarProxyExpose.dhall
 
+let TransparentProxy = ./TransparentProxy.dhall
+
 in  { Type = ../types/SidecarProxy.dhall
     , default =
       { local_service_address = None Text
@@ -12,7 +14,9 @@ in  { Type = ../types/SidecarProxy.dhall
       , upstreams = None (List ../types/SidecarProxyUpstreams.dhall)
       , expose = None ../types/SidecarProxyExpose.dhall
       , config = None (Map Text Text)
+      , transparent_proxy = None ../types/TransparentProxy.dhall
       }
     , Upstreams
     , Expose
+    , TransparentProxy
     }

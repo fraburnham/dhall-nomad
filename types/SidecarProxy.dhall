@@ -6,4 +6,5 @@ in  { local_service_address : Optional Text
     , upstreams : Optional (List ./SidecarProxyUpstreams.dhall)
     , expose : Optional ./SidecarProxyExpose.dhall
     , config : Optional (Map Text Text)
+    , transparent_proxy : Optional ./TransparentProxy.dhall
     }
